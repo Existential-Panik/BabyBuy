@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    tools:context=".SignUp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:layout_weight="1.5"
+            android:src="@drawable/ic_login"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <View
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/proxima_nova"
+            android:hint="Name"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/signupEmail"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/proxima_nova"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/signupPassword"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/proxima_nova"
+            android:hint="Password"
+            android:inputType="numberPassword"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/signupCpassword"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/proxima_nova"
+            android:hint="Confirm Password"
+            android:inputType="numberPassword"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="@color/black" />
+
+        <Button
+            android:id="@+id/signupBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#346DA1"
+            android:fontFamily="@font/bebas_neue"
+            android:padding="12dp"
+            android:text="Sign Up "
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/proxima_nova"
+                android:padding="4dp"
+                android:text="Already have an account?"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/signupLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova"
+                android:text=" LOGIN"
+                android:textColor="#547289"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
