@@ -36,6 +36,7 @@ public class AddItems extends AppCompatActivity {
     private Uri imageUri;
 
     public static Intent getIntent(Context context) {
+
         return new Intent(context, AddItems.class);
     }
 
@@ -50,6 +51,14 @@ public class AddItems extends AppCompatActivity {
         imageUri = Uri.EMPTY;
         imageView.setOnClickListener(this::pickImage);
         buttonAddItem.setOnClickListener(this::saveItem);
+    }
+
+    private void findId() {
+        buttonAddItem = findViewById(R.id.btn_addItems);
+        editTextName = findViewById(R.id.addName);
+        editTextPrice = findViewById(R.id.addPrice);
+        editTextDescription = findViewById(R.id.addDis);
+        imageView = findViewById(R.id.addImage);
     }
 
     private void saveItem(View view) {
@@ -93,21 +102,8 @@ public class AddItems extends AppCompatActivity {
         }
     }
 
-
-    private void findId() {
-        buttonAddItem = findViewById(R.id.btn_addItems);
-        editTextName = findViewById(R.id.addName);
-        editTextPrice = findViewById(R.id.addPrice);
-        editTextDescription = findViewById(R.id.addDis);
-        imageView = findViewById(R.id.addImage);
-    }
-
     private void pickImage(View view) {
-        ImagePicker.with(AddItems.this)
-                .crop()                    //Crop image(Optional), Check Customization for more option
-                .compress(1024)            //Final image size will be less than 1 MB(Optional)
-                .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
-                .start();
+        ImagePickerUtility.pickImage(view, AddItems.this);
     }
 
     @Override

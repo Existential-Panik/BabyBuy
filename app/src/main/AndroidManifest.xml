@@ -31,6 +31,9 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
+            android:name=".ItemDetails"
+            android:exported="true" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>

@@ -5,7 +5,7 @@
     android:id="@+id/recyclerViewItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#fff"
+    android:background="#D0DBDD"
     android:layout_marginBottom="1dp"
     app:cardElevation="2dp"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -16,7 +16,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:background="#CBE0F3"
+        android:padding="10dp">
 
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -24,6 +25,8 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/logo"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#20364A"
             app:cardPreventCornerOverlap="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +44,7 @@
             android:textColor="@color/black"
             android:textSize="22sp"
             android:textStyle="bold"
+            android:fontFamily="@font/proxima_nova"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -73,7 +77,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/itemPrice"
             android:layout_marginStart="10dp"
-            android:text="I Need This Product "
+            android:text="I Need This Product"
+            android:textSize="15sp"
+            android:fontFamily="@font/proxima_nova"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

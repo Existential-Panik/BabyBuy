@@ -1,36 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
     android:gravity="center"
+    android:scrollbars="vertical"
     tools:context=".AddItems">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DCDCDC"
+        >
+        <ImageView
+            android:layout_weight="1.6"
+            android:src="@drawable/ic_add_items"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <View
+            android:layout_weight="0.8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/addImage"
         android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
         android:src="@drawable/addimage"
-        app:civ_border_color="@color/black"
+        app:civ_border_color="#00293D"
+        android:layout_marginTop="20dp"
         app:civ_border_width="2dp"
         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ADD ITEM"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="30dp">
 
         <EditText
             android:id="@+id/addName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:hint="Enter Item Name "
-            android:textSize="22sp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:textSize="18sp"
             android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="#7B7B7B"
             />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -42,33 +84,54 @@
             android:id="@+id/addPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:hint="Enter Item Price "
-            android:textSize="22sp"
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:textSize="18sp"
             android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="#7B7B7B"
             />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_marginTop="10dp">
 
         <EditText
             android:id="@+id/addDis"
-            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:hint="Enter Item Discription..... "
+            android:background="@drawable/blue_border_rounded_cornwe"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/blue"
+            android:textColorHint="#7B7B7B"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="6"
+            android:gravity="top|start"
+            android:maxLines="10"
             android:layout_height="wrap_content"
-            android:hint="Enter Item Dis..... "
-            android:textSize="22sp"
-            android:inputType="text"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_addItems"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="70dp"
         android:text="Add Item"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#294158"
+        android:textColor="@color/white"
+        android:fontFamily="@font/bebas_neue"
         android:textSize="22sp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounded"
         />
 </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
